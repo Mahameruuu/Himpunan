@@ -15,6 +15,14 @@ class AnggotaController extends Controller
         return view('anggota.Anggota', compact('anggotas'));
     }
 
+    public function landingPage()
+    {
+    $anggotas = Anggota::all(); 
+    
+    return view('user.LandingPage', compact('anggotas'));
+    }
+
+
     public function create()
     {
         // Menampilkan form untuk menambah anggota

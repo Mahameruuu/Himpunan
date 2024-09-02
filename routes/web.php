@@ -5,8 +5,12 @@ use App\Http\Controllers\AnggotaController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DashboardAdminController;
 use App\Http\Controllers\KegiatanController;
+use App\Http\Controllers\LandingPageUser;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+
+# Router User
+// Route::get('/', [LandingPageUser::class, 'index'])->name('user.index');
 
 # Router Admin
 Route::get('/login', [AdminController::class, 'login'])->name('admin.login');
@@ -18,6 +22,7 @@ Route::post('/profile/update', [ProfileController::class, 'update'])->name('prof
 
 # Router Anggota
 Route::resource('anggota', AnggotaController::class);
+Route::get('/', [AnggotaController::class, 'landingPage'])->name('user.pengurus');
 
 # Router Kegiatan
 Route::resource('kegiatan', KegiatanController::class);
