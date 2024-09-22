@@ -13,6 +13,7 @@
           <li><a href="#about">About</a></li>
           <li><a href="#pengurus">Pengurus</a></li>
           <li><a href="#kegiatan">Kegiatan</a></li>
+          <li><a href="#kegiatan">Komunitas</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>

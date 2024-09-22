@@ -4,7 +4,7 @@
 <main id="main" class="main">
 
   <div class="pagetitle">
-    <h1>Form Layouts</h1>
+    <h1>Tambah Anggota</h1>
     <nav>
       <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="/dashboard">Home</a></li>

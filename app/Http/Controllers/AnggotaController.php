@@ -10,7 +10,6 @@ class AnggotaController extends Controller
 {
     public function index()
     {
-        // Menampilkan daftar anggota
         $anggotas = Anggota::all(); 
         return view('anggota.Anggota', compact('anggotas'));
     }
@@ -25,7 +24,6 @@ class AnggotaController extends Controller
 
     public function create()
     {
-        // Menampilkan form untuk menambah anggota
         return view('anggota.TambahAnggota');
     }
 

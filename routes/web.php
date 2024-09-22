@@ -5,6 +5,7 @@ use App\Http\Controllers\AnggotaController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DashboardAdminController;
 use App\Http\Controllers\KegiatanController;
+use App\Http\Controllers\KomunitasController;
 use App\Http\Controllers\LandingPageUser;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
@@ -26,3 +27,6 @@ Route::get('/', [AnggotaController::class, 'landingPage'])->name('user.pengurus'
 
 # Router Kegiatan
 Route::resource('kegiatan', KegiatanController::class);
+
+# Router Komunitas
+Route::resource('komunitas', KomunitasController::class);

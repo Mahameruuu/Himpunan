@@ -33,6 +33,14 @@
                 <i class="bi bi-person"></i><span>Anggota</span>
             </a>
         </li>
+
+        <!-- Komunitas Link -->
+        <li class="nav-item">
+            <a class="nav-link" href="/komunitas">
+                <i class="bi bi-people"></i>
+                <span>Komunitas</span>
+            </a>
+        </li>
         
         <!-- Kegiatan Link -->
         <li class="nav-item">
@@ -41,6 +49,7 @@
                 <span>Kegiatan</span>
             </a>
         </li>
+        
 
     </ul>
 </aside>
