@@ -80,7 +80,7 @@
                 </tr>
                 @endforeach
               </tbody>
-            </table><!-- End Table -->
+            </table>End Table
 
           </div>
         </div>

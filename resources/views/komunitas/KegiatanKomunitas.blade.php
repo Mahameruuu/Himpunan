@@ -7,7 +7,7 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="editModalLabel">Edit Komunitas</h5>
+        <h5 class="modal-title" id="editModalLabel">Edit Kegiatan Komunitas</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
@@ -23,11 +23,11 @@
 <main id="main" class="main">
 
   <div class="pagetitle">
-    <h1>Komunitas List</h1>
+    <h1>Kegiatan Komunitas List</h1>
     <nav>
       <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="/dashboard">Home</a></li>
-        <li class="breadcrumb-item active">Komunitas</li>
+        <li class="breadcrumb-item active">Kegiatan Komunitas</li>
       </ol>
     </nav>
   </div><!-- End Page Title -->
@@ -38,10 +38,10 @@
 
         <div class="card">
           <div class="card-body">
-            <h5 class="card-title">Daftar Komunitas</h5>
+            <h5 class="card-title">Daftar Kegiatan Komunitas</h5>
 
-            <!-- Add button to create a new Komunitas -->
-            <a href="{{ route('komunitas.create') }}" class="btn btn-primary mb-3">Tambah Komunitas</a>
+            <!-- Add button to create a new Kegiatan Kegiatan Komunitas -->
+            <a href="{{ route('kegiatan_komunitas.create') }}" class="btn btn-primary mb-3">Tambah Kegiatan Komunitas</a>
 
             @if(session('success'))
             <div class="alert alert-success">
@@ -49,34 +49,36 @@
             </div>
             @endif
 
-            <table class="table">
+            <table class="table datatable">
                 <thead>
                     <tr>
                         <th>No</th>
                         <th>Nama Komunitas</th>
-                        <th>Tanggal Didirikan</th>
+                        <th>Nama Kegiatan Komunitas</th>
+                        <th>Tanggal Dilaksanakan</th>
                         <th>Deskripsi</th>
                         <th>Foto</th>
                         <th>Actions</th>
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach($komunitas as $komunitasItem)
+                    @foreach($kegiatan_komunitas as $kegiatanKomunitas)
                     <tr>
                         <td>{{ $loop->iteration }}</td>
-                        <td>{{ $komunitasItem->nama_komunitas }}</td>
-                        <td>{{ $komunitasItem->tanggal_didirikan }}</td>
-                        <td>{{ Str::limit($komunitasItem->deskripsi, 50) }}</td>
+                        <td>{{ $kegiatanKomunitas->komunitas->nama_komunitas ?? 'N/A' }}</td> <!-- Menampilkan nama komunitas -->
+                        <td>{{ $kegiatanKomunitas->nama_kegiatan }}</td>
+                        <td>{{ $kegiatanKomunitas->tanggal_kegiatan }}</td>
+                        <td>{{ Str::limit($kegiatanKomunitas->deskripsi, 50) }}</td>
                         <td>
-                            @if($komunitasItem->foto)
-                            <img src="{{ asset('storage/' . $komunitasItem->foto) }}" width="100" alt="{{ $komunitasItem->nama_komunitas }}">
+                            @if($kegiatanKomunitas->foto)
+                            <img src="{{ asset('storage/' . $kegiatanKomunitas->foto) }}" width="100" alt="{{ $kegiatanKomunitas->nama_kegiatan }}">
                             @else
                             No Photo
                             @endif
                         </td>
                         <td>
-                          <a href="{{ route('komunitas.edit', $komunitasItem->id) }}" class="btn btn-warning btn-edit">Edit</a>
-                          <form action="{{ route('komunitas.destroy', $komunitasItem->id) }}" method="POST" style="display:inline;">
+                          <a href="{{ route('kegiatan_komunitas.edit', $kegiatanKomunitas->id) }}" class="btn btn-warning btn-edit">Edit</a>
+                          <form action="{{ route('kegiatan_komunitas.destroy', $kegiatanKomunitas->id) }}" method="POST" style="display:inline;">
                             @csrf
                             @method('DELETE')
                             <button type="submit" class="btn btn-danger">Delete</button>
