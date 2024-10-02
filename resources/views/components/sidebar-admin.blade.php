@@ -25,6 +25,18 @@
                         <i class="bi bi-circle"></i><span>Anggota</span>
                     </a>
                 </li>
+                <!-- Divisi Link -->
+                <li>
+                    <a class="nav-link" href="/divisi">
+                        <i class="bi bi-circle"></i><span>Divisi</span>
+                    </a>
+                </li>
+                <!-- Periode Link -->
+                <li>
+                    <a class="nav-link" href="/periode">
+                        <i class="bi bi-circle"></i><span>Periode</span>
+                    </a>
+                </li>
             </ul>
         </li>
 

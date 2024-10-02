@@ -200,46 +200,15 @@
     </section><!-- /Call To Action Section -->
 
     <!-- Pengurus Section -->
-    <section id="pengurus" class="pengurus section">
-        <!-- Section Title -->
-        <div class="container section-title" data-aos="fade-up">
-            <h2>Pengurus Himpunan</h2>
-            <p>Periode 2024</p>
-        </div><!-- End Section Title -->
-
-        <div class="container">
-            <div class="slider-container">
-                <button class="prev">&lt;</button>
-                <div class="slider">
-                    <div class="slides">
-                        @foreach($anggotas as $anggota)
-                        <div class="slide">
-                            <div class="team-member d-flex align-items-start">
-                                <div class="pic p-4">
-                                    <!-- Menampilkan foto anggota jika ada -->
-                                    <img src="{{ $anggota->foto ? asset('storage/' . $anggota->foto) : 'default-image.jpg' }}" class="img-fluid team-member-img" alt="{{ $anggota->nama }}">
-                                </div>
-                                <div class="member-info">
-                                    <h4>{{ $anggota->nama }}</h4>
-                                    <span>{{ $anggota->jabatan }}</span>
-                                    <p>{{ $anggota->npm }}</p>
-                                    <div class="social">
-                                        <!-- Tambahkan link sosial jika ada -->
-                                        <a href="#"><i class="bi bi-twitter-x"></i></a>
-                                        <a href="#"><i class="bi bi-facebook"></i></a>
-                                        <a href="#"><i class="bi bi-instagram"></i></a>
-                                        <a href="#"><i class="bi bi-linkedin"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div><!-- End Slide -->
-                        @endforeach
-                    </div>
-                </div>
-                <button class="next">&gt;</button>
-            </div>
-        </div>
-    </section><!-- /Pengurus Section -->
+    <section id="hero" class="hero d-flex align-items-center">
+    <div class="container text-center">
+        <h1 data-aos="fade-up">Selamat Datang di Himpunan Kami</h1>
+        <h2 data-aos="fade-up" data-aos-delay="100">Bersama Mewujudkan Impian Bersama</h2>
+        <p data-aos="fade-up" data-aos-delay="200">Temui tim pengurus yang berdedikasi untuk menciptakan perubahan positif.</p>
+        <a href="" class="btn btn-primary" data-aos="fade-up" data-aos-delay="300">Kenali Tim Kami</a>
+    </div>
+</section>
+<!-- /Pengurus Section -->
 
     <!-- kegiatan Section -->
     <section id="kegiatan" class="kegiatan section">
