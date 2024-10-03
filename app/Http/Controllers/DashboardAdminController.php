@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Anggota;
 use App\Models\Kegiatan;
+use App\Models\Periode;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 
@@ -21,12 +22,8 @@ class DashboardAdminController extends Controller
         // Jumlah kegiatan
         $jumlahKegiatan = Kegiatan::count();
 
-        // Periode terbaru 
-        $periode = Kegiatan::selectRaw('YEAR(created_at) as year')
-                            ->distinct()
-                            ->orderBy('year', 'desc')
-                            ->first();
-        $tahunPeriode = $periode ? $periode->year : 0;
+        // Tahun Periode 
+        $tahunPeriode = Periode::where('status', 'active')->latest()->value('tahun');
 
         // 5 Kegiatan terbaru
         $kegiatanList = Kegiatan::orderBy('tanggal', 'desc')->take(5)->get();

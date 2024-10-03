@@ -10,9 +10,9 @@ return new class extends Migration
     {
         Schema::create('divisis', function (Blueprint $table) {
             $table->id();
-            $table->string('nama_divisi'); // Kolom untuk nama divisi
-            $table->integer('jumlah_anggota'); // Kolom untuk jumlah anggota divisi
-            $table->enum('status', ['aktif', 'non-aktif'])->default('non-aktif'); // Kolom status dengan nilai default non-aktif
+            $table->string('nama_divisi'); 
+            $table->integer('jumlah_anggota'); 
+            $table->enum('status', ['aktif', 'non-aktif'])->default('non-aktif'); 
             $table->timestamps();
         });
     }

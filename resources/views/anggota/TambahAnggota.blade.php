@@ -39,10 +39,13 @@
               </div>
 
               <div class="row mb-3">
-                <label for="inputJabatan" class="col-sm-2 col-form-label">Jabatan</label>
-                <div class="col-sm-10">
-                  <input type="text" name="jabatan" class="form-control" id="inputJabatan" required>
-                </div>
+                  <label for="divisi">Divisi</label>
+                  <select name="jabatan" id="divisi" class="form-control" required>
+                      <option value="">-- Pilih Divisi --</option>
+                      @foreach($divisis as $divisi)
+                          <option value="{{ $divisi->nama_divisi }}">{{ $divisi->nama_divisi }}</option>
+                      @endforeach
+                  </select>
               </div>
 
               <div class="row mb-3">

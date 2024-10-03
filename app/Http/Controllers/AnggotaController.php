@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Anggota;
+use App\Models\Divisi;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
 
@@ -24,7 +25,8 @@ class AnggotaController extends Controller
 
     public function create()
     {
-        return view('anggota.TambahAnggota');
+        $divisis = Divisi::where('status', 'aktif')->get();
+        return view('anggota.TambahAnggota', compact('divisis'));
     }
 
     public function store(Request $request)

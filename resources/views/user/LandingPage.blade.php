@@ -201,14 +201,14 @@
 
     <!-- Pengurus Section -->
     <section id="hero" class="hero d-flex align-items-center">
-    <div class="container text-center">
-        <h1 data-aos="fade-up">Selamat Datang di Himpunan Kami</h1>
-        <h2 data-aos="fade-up" data-aos-delay="100">Bersama Mewujudkan Impian Bersama</h2>
-        <p data-aos="fade-up" data-aos-delay="200">Temui tim pengurus yang berdedikasi untuk menciptakan perubahan positif.</p>
-        <a href="" class="btn btn-primary" data-aos="fade-up" data-aos-delay="300">Kenali Tim Kami</a>
-    </div>
-</section>
-<!-- /Pengurus Section -->
+        <div class="container text-center">
+            <h1 data-aos="fade-up">Selamat Datang di Himpunan Kami</h1>
+            <h2 data-aos="fade-up" data-aos-delay="100">Bersama Mewujudkan Impian Bersama</h2>
+            <p data-aos="fade-up" data-aos-delay="200">Temui tim pengurus yang berdedikasi untuk menciptakan perubahan positif.</p>
+            <a href="" class="btn btn-primary" data-aos="fade-up" data-aos-delay="300">Kenali Tim Kami</a>
+        </div>
+    </section>
+    <!-- /Pengurus Section -->
 
     <!-- kegiatan Section -->
     <section id="kegiatan" class="kegiatan section">
